@@ -1,11 +1,20 @@
 const express = require("express"),
     app = express();
 
+var log = function (entry) {
+    fs.appendFileSync(
+        "/tmp/sample-app.log",
+        new Date().toISOString() + " - " + entry + "\n"
+    );
+};
+
 app.get("/", async (req, res) => {
+    log("Received req");
     res.send("Hello");
 });
 
 app.get("/Hello", async (req, res) => {
+    log("Received message req");
     res.send("Hello mdf");
 });
 
