@@ -2,7 +2,7 @@ const express = require("express"),
     app = express();
 
 app.get("/", async (req, res) => {
-    res.send("Hello");
+    res.send("Hello" + process.env.VAR);
 });
 
 app.get("/Hello", async (req, res) => {
