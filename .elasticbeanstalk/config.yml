@@ -1,4 +1,0 @@
-branch-defaults:
-  default:
-    enviroment: Node-APP
-    group_suffix: null
