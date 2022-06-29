@@ -9,7 +9,7 @@ app.get("/Hello", async (req, res) => {
     res.send("Hello mdf");
 });
 
-app.get("/Hello", async (req, res) => {
+app.get("/al", async (req, res) => {
     res.send("Alcides");
 });
 
