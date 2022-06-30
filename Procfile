@@ -1,1 +1,1 @@
-web: sudo npm run deploy
+web: echo "helloo" && npm run deploy
