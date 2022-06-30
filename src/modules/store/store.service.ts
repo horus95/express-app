@@ -11,7 +11,7 @@ import { UsersByStoreService } from '../users_by_store/users_by_store.service';
 import { CreateStoreDto } from './dto/create.store.dto';
 import { StoreEntity } from './store.entity';
 import { StoreModel } from './store.interface';
-import * as sc from 'simplecrypt';
+import * as simplecrypt from 'simplecrypt';
 import { JwtService } from '@nestjs/jwt';
 import { Response } from 'express';
 
@@ -34,6 +34,7 @@ export class StoreService {
       let newUser = new UsersByStoreEntity();
       newUser.store_id = createdStore.id;
       newUser.username = store.username;
+      const sc = simplecrypt();
       newUser.password = sc.encrypt(store.password);
 
       const newCreatedUser = await this.UsersByStoreService.create(
