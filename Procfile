@@ -1,1 +1,1 @@
-web: echo "helloo" && npm run deploy
+web: npm run deploy
